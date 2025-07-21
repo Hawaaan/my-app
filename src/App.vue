@@ -9,18 +9,32 @@
 <div class="flex-1 items-center text-4xl mt-4 ml-4">
   <h1> my product is {{ product }}</h1>
 </div>
-<div class="flex-1 items-center text-4xl mt-4 ml-4">
-  <img  v-bind:src="image">
+  
+<img class="h-60" :src="image"/>
+<div class="flex-1 items-center text-4xl mt-4 ml-14">
+  <p v-if="inStock"> in Stock</p>
+  <p v-else> out Stock</p>
+</div>
+<div class="flex items-center text-4xl mt-4 ml-14">
+  <p v-if="inventory < 100"> in Stock</p>
+  <p v-else-if="inventory <=10 && inventory > 0"> Almost sold out !</p>
+  <p v-else>out stock</p>
+
 </div>
 
 </template>
 
 <script>
+import images from './assets/socks_green.jpg'
 export default {
   data() {
     return {
       product: 'socks',
-      image: './assets/images/socks-green.jpg'
+      image: images,
+      inStock: true,
+      inventory: 119
+
+
     }
   }
 }
