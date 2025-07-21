@@ -17,7 +17,7 @@
 </div>
 <div class="flex items-center text-4xl mt-4 ml-14">
   <p v-if="inventory < 100"> in Stock</p>
-  <p v-else-if="inventory <=10 && inventory > 0"> Almost sold out !</p>
+  <p v-else-if="inventory <=10 && inventory > 0"> Almost sold out</p>
   <p v-else>out stock</p>
 
 </div>
@@ -26,10 +26,16 @@
 
 <script>
 import images from './assets/socks_green.jpg'
+import images from './assets/socks_green.jpg'
 export default {
   data() {
     return {
       product: 'socks',
+      image: images,
+      inStock: true,
+      inventory: 119
+
+
       image: images,
       inStock: true,
       inventory: 119
