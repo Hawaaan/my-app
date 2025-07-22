@@ -53,7 +53,6 @@
 
 <script>
 import images from './assets/socks_green.jpg'
-import images from './assets/socks_green.jpg'
 export default {
   data() {
     return {
@@ -68,22 +67,12 @@ export default {
       ],
       cart: 0,
       amoubt: 0
-
-
-      image: images,
-      inStock: true,
-      inventory: 119
-
-
     }
   },
   methods: {
     addToCart() {
       this.cart += 1;
     },
-    updateImage(variantImage) {
-      this.image = variantImage;
-    }
   }
 }
 </script>
